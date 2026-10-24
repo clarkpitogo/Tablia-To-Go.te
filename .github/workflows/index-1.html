@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablea To-Go | Tablea and Sikwate in Cebu City</title>
+  <meta name="description" content="Tablea To-Go is a proposed Cebu City business offering tablea tablets, ready-to-drink sikwate, gift boxes and sikwate mix sachets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- PyScript (pinned release). Verify the version against https://pyscript.net before submitting. -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home">Tablea To-Go</a>
+  <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <nav id="nav-links" class="nav-links" aria-label="Main">
+    <a href="#home">Home</a><a href="#products">Products</a><a href="#about">About Us</a>
+    <a href="#promotions">Promotions</a><a href="#order">Order Now</a><a href="#contact">Contact</a>
+    <a class="cart-pill" href="#cart">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <h1>A Taste of Tradition, Ready to Go.</h1>
+    <p>Enjoy the rich taste of Filipino cacao with Tablea To-Go. Discover our tablea tablets, freshly prepared sikwate, gift boxes, and convenient cacao mixes.</p>
+    <div class="btn-row">
+      <button class="btn promo-btn" data-target="#products">Explore Our Products</button>
+      <button class="btn btn-ghost messenger-btn">Order Through Messenger</button>
+    </div>
+    <p class="fine">Tablea To-Go is a proposed business for a school project. It is not yet operating.</p>
+  </div>
+  <svg class="hero-art" viewBox="0 0 320 300" role="img" aria-label="Steaming cup of sikwate beside tablea tablets">
+    <path d="M120 40c-14 22 14 30 0 52M160 30c-14 22 14 30 0 52M200 40c-14 22 14 30 0 52" fill="none" stroke="#e9c58b" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+    <path d="M70 110h180v70c0 46-36 80-90 80s-90-34-90-80z" fill="#f3e3c3"/>
+    <path d="M250 130h24c20 0 20 50 0 50h-28" fill="none" stroke="#f3e3c3" stroke-width="14"/>
+    <path d="M70 110h180v22H70z" fill="#7a3b22"/>
+    <ellipse cx="160" cy="276" rx="120" ry="12" fill="#00000040"/>
+    <g fill="#5a2c17" stroke="#c8872e" stroke-width="3"><rect x="14" y="214" width="52" height="30" rx="6"/><rect x="26" y="190" width="52" height="30" rx="6"/></g>
+  </svg>
+</section>
+
+<section id="products" class="section">
+  <h2>Product</h2>
+  <p class="lead">Proposed prices from our feasibility study. </p>
+  <div id="product-grid" class="grid"></div>
+
+  <aside class="product-video-ad" aria-labelledby="product-video-ad-title">
+    <div class="product-video-ad-copy">
+      <p class="video-ad-label">Featured Video Ad</p>
+      <h3 id="product-video-ad-title">Discover the Tablea To-Go Experience</h3>
+      <p>Watch our featured video and explore the rich Filipino cacao tradition behind Tablea To-Go.</p>
+      <a class="btn video-ad-cta" href="#order">Order Now</a>
+    </div>
+    <video class="product-ad-video" controls muted playsinline preload="metadata">
+      <source src="lv_0_20261025012840.mp4" type="video/mp4">
+      Sorry, your browser does not support embedded videos.
+    </video>
+  </aside>
+</section>
+
+<section id="cart" class="section tint">
+  <h2>Your Cart</h2>
+  <div class="cart-box">
+    <ul id="cart-items" class="cart-items"></ul>
+    <div class="cart-foot">
+      <p class="total-row">Total <strong id="cart-total">₱0</strong></p>
+      <div class="btn-row">
+        <button id="clear-cart" class="btn btn-ghost" disabled>Clear cart</button>
+        <button id="checkout" class="btn" disabled>Continue to order</button>
+      </div>
+      <p class="fine">This cart only prepares an order request. No payment is taken on this site.</p>
+    </div>
+  </div>
+</section>
+
+<section id="promotions" class="section">
+  <h2>Special Offers &amp; Promotions</h2>
+  <p class="lead">Sample advertisements for Tablea To-Go. These are planned promotional concepts, not active discounts or limited-time deals.</p>
+  <div class="grid ads">
+    <article class="ad ad1"><h3>Your Cacao Break Starts Here!</h3><p>Enjoy the comforting taste of sikwate and tablea. Discover a delicious treat for your next study break.</p><p class="ad-label">Student-Friendly Treat</p><button class="btn promo-btn" data-target="#products">Explore Our Products</button></article>
+    <article class="ad ad3"><h3>Hot or Cold, Make It Your Cacao Moment!</h3><p>Discover our 12 oz ready-to-drink sikwate.</p><p class="ad-price">₱80</p><button class="btn promo-btn" data-target="#product-sikwate">Try Sikwate</button></article>
+    <article class="ad ad4"><h3>Bring Home the Rich Taste of Cacao!</h3><p>Explore our Tablea Tablet Pack and Sikwate Mix Sachets.</p><p class="ad-price">₱150 · ₱40</p><button class="btn promo-btn" data-target="#products">Shop Now</button></article>
+  </div>
+</section>
+
+<section id="about" class="section tint">
+  <h2>About Us</h2>
+  <p class="lead">Tablea To-Go is a proposed food and beverage business in Cebu City, Philippines, offering tablea cacao tablets, ready-to-drink sikwate, gift boxes, and convenient sikwate mix sachets. Our goal is to make Filipino cacao products accessible through convenient ordering and flexible pickup or delivery arrangements.</p>
+  <h3>What we plan to stand for</h3>
+  <ul class="values">
+    <li>Filipino cacao tradition</li><li>Product quality</li><li>Affordable options</li><li>Convenient ordering</li><li>Thoughtful packaging</li>
+  </ul>
+</section>
+
+
+<section id="order" class="section order-section">
+  <h2>Order Now</h2>
+  <form id="order-form" class="form" novalidate>
+    <div class="field"><label for="cust-name">Customer name</label><input id="cust-name" autocomplete="name"><p class="err" id="err-cust-name"></p></div>
+    <div class="field"><label for="contact">Contact information</label><input id="contact" placeholder="Mobile number, email, or Messenger name"><p class="err" id="err-contact"></p></div>
+    <div class="field wide"><p class="err" id="err-order-selection-error"></p>
+      <label class="check"> </label></div>
+    <div class="field" id="temp-field" hidden><label for="temperature">Sikwate temperature</label>
+      <select id="temperature"><option value="">Choose…</option><option>Hot</option><option>Cold</option></select><p class="err" id="err-temperature"></p></div>
+    <div class="field"><label for="fulfillment">Pickup, meet-up, or delivery</label>
+      <select id="fulfillment"><option value="">Choose…</option><option>Pickup</option><option>Meet-up</option><option>Delivery</option></select><p class="err" id="err-fulfillment"></p></div>
+    <div class="field"><label for="when">Preferred date or time (optional)</label><input id="when" placeholder="e.g. Friday afternoon"></div>
+    <div class="field wide"><label for="notes">Additional notes (optional)</label><textarea id="notes" rows="3"></textarea></div>
+    <div class="field wide"><button class="btn" type="submit">Prepare order request</button></div>
+    </section>
+  </form>
+
+  <div id="order-result" class="result" hidden aria-live="polite">
+    <h3>Your order request is prepared</h3>
+    <p>It has <strong>not</strong> been sent. Copy the summary and send it on Messenger so the seller can confirm availability, price, and pickup or delivery details.</p>
+    <pre id="summary-text"></pre>
+    <div class="btn-row">
+      <button id="copy-summary" class="btn">Copy order summary</button>
+      <button class="btn btn-alt messenger-btn">Open Messenger</button>
+      <button id="new-order" class="btn btn-ghost">Start a new order</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <div>
+      <p><strong>Tablea To-Go</strong><br>Cebu City, Philippines</p>
+      <p>Planned ordering channel: Facebook Messenger.</p>
+      <p>
+  <a href="https://m.me/YOUR_PAGE_USERNAME"
+     target="_blank"
+     rel="https://www.facebook.com/j.mcxcvbz"
+     class="btn btn-alt messenger-btn">
+    Message us on Messenger
+  </a>
+</p>
+    
+    </div>
+    <form id="contact-form" class="form single" novalidate>
+      <div class="field"><label for="c-name">Your name</label><input id="c-name"></div>
+      <div class="field"><label for="c-message">Message</label><textarea id="c-message" rows="3"></textarea></div>
+      <button class="btn" type="submit">Prepare inquiry</button>
+      <p id="contact-result" class="notice" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div><strong class="brand">Tablea To-Go</strong><p>Pure cacao, shared the Filipino way.</p></div>
+  <div><strong>Explore</strong><a href="#home">Home</a><a href="#about">About Us</a><a href="#promotions">Promotions</a></div>
+  <div><strong>Products</strong><a href="https://www.cacaoculture.ph/products/premium-chocolate-tablea-box?srsltid=AYCX9vIxvUjNRmJCNGTQXUCvf4y-W77JcspmXF26wa3DDxbIZfOTEZ7R">Tablea Tablet Pack</a><a href="https://www.cacaoculture.ph/products/chokolate-de-san-isidro-sikwate-organic-tablea-100-cacao?srsltid=AYCX9vL7KXu-riqinAZGXMEdARTmZE9oIkzJzvzLMvVtz0Qpn8KuXgip">Sikwate</a><a href="https://www.konvergesweets.com/product-page/sikwate-certified-organic-tablea-cocoa-liquor-cocoa-1kg-block">Sikwate Mix Sachet</a></div>
+  <div><strong>Contact</strong><span>Cebu City, Philippines</span><span>Facebook Messenger</span></div>
+  <p class="copy">© <span id="year">2026</span> Tablea To-Go. </p>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script type="py" src="./main.py"></script>
+</body>
+</html>
